@@ -22,27 +22,27 @@ keckec's original work.  I highly recommend that you register the
 weather station through Lacrosse Technologies first.
 
 Use the Advanced Gateway Setup program from Lacrosse to redirect
-the data to your webserver.  
+the data to your webserver.
 
 Near the top of the request.breq file are important configuration
 options:
 
-OF_RTG: send replies to gateway.  You almost always want this set.
-OF_WDB: store data to database.  Until you get the station serial
+* OF_RTG: send replies to gateway.  You almost always want this set.
+* OF_WDB: store data to database.  Until you get the station serial
     information from Lacrosse, you want to leave this off
-OF_DBG: if this flag is not set, there will be no debug information
+* OF_DBG: if this flag is not set, there will be no debug information
    sent to wstation.log at all.  See DBG_LVL below.
-OF_WUG: send data to Weather Underground.  You must have the account
+* OF_WUG: send data to Weather Underground.  You must have the account
    information set in the database first.
-OF_LAC: relay the data to box.weatherdirect.com.  This can be very useful
+* OF_LAC: relay the data to box.weatherdirect.com.  This can be very useful
    at first in getting the serial number, and later for comparing your
    responses with theirs.
-OF_RES: send the responses from above instead of your own.  This effectively
+* OF_RES: send the responses from above instead of your own.  This effectively
    makes your webserver a proxy
-DBG_LVL: OF_DBG must be set for this to send ouput to the wstation.log file
-    0: only critical errors
-    1: packet activity, useful to confirm that it's working
-    2: detail, useful for debugging but fills the log fast
+* DBG_LVL: OF_DBG must be set for this to send ouput to the wstation.log file
+    * 0: only critical errors
+    * 1: packet activity, useful to confirm that it's working
+    * 2: detail, useful for debugging but fills the log fast
 
 You will need to get the station serial number by sniffing packets
 coming from Lacrosse. You can use the output flags to help with this.
