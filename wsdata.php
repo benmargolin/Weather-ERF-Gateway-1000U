@@ -1,6 +1,6 @@
 <?php
 // Note that all this code assumes a single weather station
-$stationid = 55;
+$stationid = 57;
 try {
 	$wdb = new PDO('mysql:dbname=weather');
 	$wdb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
